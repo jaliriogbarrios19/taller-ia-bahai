@@ -522,8 +522,6 @@ li{margin:6px 0}
     </div>
     <!-- IMAGEN FINAL DE VIBE -->
     <img class="imagen-real" src="vibe.png" alt="Robot amigable Vibe con estela dorada, estilo acuarela">
-    <!-- AGREGA TU CITA AQUÍ -->
-    <div class="cita-bahai" contenteditable="true">[Aquí va tu cita Bahá'í final de inspiración]</div>
   </div>
 </div>
 
@@ -534,9 +532,10 @@ function toggleDesplegable(id) {
   // Si la sección ya está abierta, se cierra; si está cerrada, se abre
   var abrir = element.style.display !== 'block';
   element.style.display = abrir ? 'block' : 'none';
-  // Aplicar la misma acción a todo el contenido anidado (subpuntos y respuestas):
-  // así el asistente abre/cierra una sección entera con un solo clic
-  element.querySelectorAll('.desplegable, .respuesta').forEach(function(hijo) {
+  // Aplicar la misma acción a todo el contenido anidado (subpuntos),
+  // pero NO a las respuestas de preguntas: estas quedan ocultas
+  // y solo se muestran al hacer clic en cada pregunta.
+  element.querySelectorAll('.desplegable').forEach(function(hijo) {
     hijo.style.display = abrir ? 'block' : 'none';
   });
   if (abrir) {
