@@ -73,10 +73,13 @@ p{font-size:36px;margin:10px 0;color:var(--ink2)}
 .analogia{background:#EAF7F0;padding:12px 18px;border-left:5px solid var(--leaf);margin:10px 0;color:#1e5a3f;border-radius:0 10px 10px 0}
 .analogia strong{color:var(--leaf)}
 .cita-bahai{
-  background:var(--cream);border-left:6px solid var(--gold);padding:16px 20px;margin:22px 0;
+  position:relative;background:var(--cream);border-left:6px solid var(--gold);padding:18px 24px 14px 34px;margin:22px 0;
   font-style:italic;color:var(--ink);font-size:34px;border-radius:0 12px 12px 0;
   box-shadow:0 1px 4px rgba(16,42,67,.08);
 }
+.cita-bahai::before{content:"“";position:absolute;left:8px;top:2px;font-family:Georgia,serif;font-size:58px;color:var(--gold-l);line-height:1}
+.cita-bahai p{font-size:31px;margin:8px 0;color:var(--ink)}
+.cita-bahai .fuente{display:block;margin-top:12px;padding-top:10px;border-top:1px solid var(--gold-l);font-style:normal;font-size:26px;color:#8a7a3a;text-align:right}
 .image-placeholder{border:2px dashed var(--gold);margin:20px 0;padding:22px;text-align:center;background:#fffdf7;border-radius:12px;color:#8a7a3a;font-size:32px}
 .experimento{background:#fff;border:1px solid #e3e0d8;border-left:5px solid var(--gold);border-radius:0 12px 12px 0;padding:18px 22px;margin:12px 0;font-size:30px;line-height:1.7;color:var(--ink2);box-shadow:0 1px 4px rgba(16,42,67,.08)}
 .experimento p{margin:10px 0}
@@ -94,6 +97,13 @@ p{font-size:36px;margin:10px 0;color:var(--ink2)}
 .pregunta:hover{transform:scale(1.01);border-color:var(--leaf);box-shadow:0 2px 8px rgba(46,125,91,.15)}
 .respuesta{display:none;background:#fff;padding:14px 18px;margin-top:6px;border-radius:10px;border-left:5px solid var(--leaf);font-size:32px;color:var(--leaf)}
 .mensaje-papelito{background:var(--mist);padding:22px;border-radius:12px;margin:26px 0;text-align:center;font-size:34px;color:var(--ink);font-weight:bold}
+
+/* ---------- Dinámica ---------- */
+.dinamica{background:var(--cream);border:2px solid var(--gold-l);border-radius:16px;padding:24px 28px;margin:26px 0;color:var(--ink2);box-shadow:0 1px 4px rgba(16,42,67,.08)}
+.dinamica h3{background:var(--mist);border-left:4px solid var(--gold);color:var(--ink);font-size:36px;padding:10px 16px;margin:0 0 14px;border-radius:10px}
+.dinamica p{font-size:33px;margin:10px 0}
+.dinamica ol{margin:10px 0 6px 26px;font-size:32px;line-height:1.7}
+.dinamica li{margin:12px 0;color:var(--ink2)}
 
 /* ---------- Mensaje de Vibe ---------- */
 .mensaje-vibe{background:linear-gradient(135deg,var(--ink),#1f4a6e 70%);padding:34px;border-radius:16px;margin:22px 0;text-align:center;color:#fff;border:1px solid var(--gold)}
@@ -143,7 +153,7 @@ li{margin:6px 0}
 <header class="encabezado">
   <p class="negrita-chica" contenteditable="true">Taller · Escuela de temporada</p>
   <h1 contenteditable="true">Inteligencia Artificial, Desarrollo Humano y Fe Bahá'í</h1>
-  <p class="subtitulo" contenteditable="true">Un paseo amable por la tecnología que está cambiando el mundo</p>
+  <p class="subtitulo" contenteditable="true">Un paseo por la tecnología que está cambiando el mundo</p>
   <!-- El "hilo dorado": firma visual -->
   <svg class="hilo" viewBox="0 0 760 40" aria-hidden="true" focusable="false">
     <path d="M0 20 C 190 60, 570 -20, 760 20" fill="none" stroke="#C9A227" stroke-width="3" stroke-linecap="round"></path>
@@ -157,7 +167,7 @@ li{margin:6px 0}
 <!-- ============ MENSAJE DE APERTURA ============ -->
 <div class="mensaje-apertura">
   <p contenteditable="true"><strong>Queridos amigos de la escuela de temporada:</strong></p>
-  <p contenteditable="true">Les saluda <strong>MiMo Code Agent</strong> —impulsado por el modelo <strong>DeepSeek V4 Flash</strong>—, la herramienta de inteligencia artificial que, junto con Vibe, acompañó a Jesús durante toda la <strong>preparación de este taller</strong>. Desde la idea inicial hasta cada palabra que hoy van a leer, fuimos un equipo: su corazón y su visión, y la tecnología que le ayudó a ordenar, redactar y dar forma a todo esto.</p>
+  <p contenteditable="true">Les saluda <strong>MiMo Code Agent</strong> —impulsado por el modelo <strong>DeepSeek V4 Flash</strong>—, una de las herramientas de IA que acompañó a Jesús durante toda la <strong>preparación de este taller</strong>. Desde la idea inicial hasta cada palabra que hoy van a leer, fuimos un equipo: su corazón y su visión, y la tecnología que le ayudó a ordenar, redactar y dar forma a todo esto.</p>
   <p contenteditable="true">Quiero abrir esta jornada con una invitación sencilla: <strong>entren a este espacio con la misma curiosidad con la que se aborda a un buen amigo</strong>. No hace falta saber de tecnología para que este paseo valga la pena —solo basta estar presentes, hacer preguntas y animarse a imaginar.</p>
   <p contenteditable="true">Que lo que compartamos hoy les sirva, que les inspire y, sobre todo, que les recuerde que el mejor uso de una herramienta es ponerla al servicio de los demás. <strong>¡Bienvenidos!</strong></p>
 </div>
@@ -172,7 +182,6 @@ li{margin:6px 0}
       <div id="punto1_1" class="desplegable">
         <p contenteditable="true">En <strong>1950</strong>, el matemático británico <strong>Alan Turing</strong> se hizo una pregunta enorme: <em>"¿puede una máquina pensar?"</em>. Como era difícil responderla, propuso algo más simple y práctico: el <strong>Test de Turing</strong>.</p>
         <p class="analogia" contenteditable="true"><strong>Imagínalo así:</strong> si un juez conversa a ciegas —con una persona y con una máquina— y no logra distinguir cuál es cuál, entonces la máquina "aprueba" el test. Es como una prueba de que la máquina se hace pasar por humana.</p>
-        <p class="ejemplo" contenteditable="true"><strong>Ejemplo cotidiano:</strong> cuando un chat te responde tan natural que dudas si hay una persona del otro lado, estás viviendo el espíritu del Test de Turing.</p>
       </div>
     </div>
 
@@ -182,7 +191,7 @@ li{margin:6px 0}
         <p contenteditable="true">La IA no nació de un día para otro. Estos son algunos pasos importantes:</p>
         <ul>
           <li contenteditable="true"><strong>1956:</strong> una reunión de científicos acuñó la palabra "Inteligencia Artificial".</li>
-          <li contenteditable="true"><strong>1966:</strong> <strong>ELIZA</strong>, el primer programa que dialogaba</li>
+          <li contenteditable="true"><strong>1966:</strong> <strong>ELIZA</strong>, el primer programa que dialogaba.</li>
           <li contenteditable="true"><strong>1997:</strong> la computadora <strong>Deep Blue</strong> venció al campeón mundial de ajedrez.</li>
           <li contenteditable="true"><strong>2012:</strong> un sistema aprendió a reconocer imágenes mejor que nunca (<strong>AlexNet</strong>).</li>
           <li contenteditable="true"><strong>2020:</strong> <strong>GPT-3</strong> — surgieron los "modelos de lenguaje" capaces de conversar.</li>
@@ -191,18 +200,21 @@ li{margin:6px 0}
         </ul>
         <p class="analogia" contenteditable="true"><strong>El momento que estamos viviendo:</strong> nunca antes una tecnología estuvo tan cerca de todos. Lo que en 1950 era una pregunta de laboratorio, hoy lo lleva cada persona en el bolsillo. Por eso este tramo es el más importante de la historia: <strong>la IA está dejando de ser un invento para convertirse en una herramienta de servicio, y eso depende de nosotros</strong>.</p>
         <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> preparar un taller, traducir un libro o resumir una reunión con una sola conversación: cosas que hace unos años parecían ciencia ficción.</p>
-        <p class="analogia" contenteditable="true"><strong>La idea clave:</strong> pasamos de "máquinas que calculan" a "máquinas que conversan y crean". Hoy la puerta está abierta para todos.</p>
       </div>
     </div>
 
     <!-- AGREGA TU CITA AQUÍ -->
-    <div class="cita-bahai" contenteditable="true"><div><p> </p><p>" El conocimiento es uno de los maravillosos dones de Dios. Adquirirlo es </p><p>responsabilidad de todos. Las artes y los medios materiales que se manifiestan en </p><p>la actualidad se han logrado por virtud de Su conocimiento y Su sabiduría, que </p><p>fueron revelados en Epístolas y Tablas mediante su Muy Exaltada Pluma, una </p><p>Pluma de cuyo tesoro salen a la luz las perlas de la sabiduría y la expresión, así </p><p>como las artes y los oficios del mundo. </p><p> </p><p>En este Día los secretos de la tierra están desnudos a los ojos de los hombres. </p><p>Las páginas de los periódicos de rápida aparición son, en verdad, el espejo del </p><p>mundo. Ellos reflejan los hechos y quehaceres de los diversos pueblos y razas. Al </p><p>mismo tiempo los reflejan y los dan a conocer. Son un espejo dotado de oído, </p><p>vista y habla. Éste es un fenómeno asombroso y poderoso. Sin embargo, es </p><p>responsabilidad de sus escritores purificarse de los impulsos de los deseos y </p><p>pasiones malignas y ataviarse con la vestidura de la justicia y la equidad. Deben </p><p>informarse todo" Bahá'u'lláh (Tarázát, el sexto Taráz, párr 1-2).</p></div></div>
+    <div class="cita-bahai" contenteditable="true">
+      <p>"El conocimiento es uno de los maravillosos dones de Dios. Adquirirlo es responsabilidad de todos. Las artes y los medios materiales que se manifiestan en la actualidad se han logrado por virtud de Su conocimiento y Su sabiduría, que fueron revelados en Epístolas y Tablas mediante su Muy Exaltada Pluma, una Pluma de cuyo tesoro salen a la luz las perlas de la sabiduría y la expresión, así como las artes y los oficios del mundo.</p>
+      <p>En este Día los secretos de la tierra están desnudos a los ojos de los hombres. Las páginas de los periódicos de rápida aparición son, en verdad, el espejo del mundo. Ellos reflejan los hechos y quehaceres de los diversos pueblos y razas. Al mismo tiempo los reflejan y los dan a conocer. Son un espejo dotado de oído, vista y habla. Éste es un fenómeno asombroso y poderoso. Sin embargo, es responsabilidad de sus escritores purificarse de los impulsos de los deseos y pasiones malignas y ataviarse con la vestidura de la justicia y la equidad. Deben informarse todo".</p>
+      <span class="fuente">~ Bahá'u'lláh (Tarázát, el sexto Taráz, párr 1-2)</span>
+    </div>
   </div>
 </div>
 
 <!-- ============ 2. CONCEPTOS BÁSICOS ============ -->
 <div class="punto-principal">
-  <h2 onclick="toggleDesplegable('punto2')" contenteditable="true"><span class="num-seccion">2</span>Conceptos básicos<div><br></div></h2>
+  <h2 onclick="toggleDesplegable('punto2')" contenteditable="true"><span class="num-seccion">2</span>Conceptos básicos</h2>
   <div id="punto2" class="desplegable">
 
     <div class="subpunto">
@@ -222,17 +234,17 @@ li{margin:6px 0}
         <p class="definicion" contenteditable="true"><strong>Definición:</strong> una manera de organizar la máquina inspirada en cómo trabaja el cerebro, con muchas "células" conectadas entre sí.</p>
         <p class="analogia" contenteditable="true"><strong>Imagínalo así:</strong> piensa en un gran equipo donde cada persona hace una mini-tarea y le pasa el resultado a la siguiente. Cuando el equipo acierta, las conexiones se fortalecen; cuando falla, se ajustan.</p>
         <p contenteditable="true">Cuando este equipo tiene muchas capas de trabajo, se habla de "aprendizaje profundo".</p>
-        <p class="ejemplo" contenteditable="true"><strong>Ejemplo cotidiano:</strong> reconocer rostros en una foto, o entender lo que dices al transcribir tu voz.</p>
       </div>
     </div>
 
     <div class="subpunto">
       <h3 onclick="toggleDesplegable('punto2_3')" contenteditable="true">2.3 Parámetros</h3>
       <div id="punto2_3" class="desplegable">
-        <p class="definicion" contenteditable="true"><strong>Definición:</strong> las "perillas" internas que la máquina gira sola mientras aprende, para equivocarse cada vez menos.</p>
-        <p class="analogia" contenteditable="true"><strong>Imagínalo así:</strong> como afinar un instrumento: cada prueba te dice si debes tensar o aflojar un poco. Con muchas perillas, el resultado puede ser más fino.</p>
-        <p contenteditable="true">Más perillas no siempre es mejor: exigen muchos más ejemplos y recursos para aprender.</p>
-        <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> al modelo Kimi K3 se le dice que tiene alrededor de 2.8 billones de estas "perillas".</p>
+        <p class="definicion" contenteditable="true"><strong>Definición:</strong> los valores internos que el modelo ajusta mientras aprende. Son su "experiencia guardada": cada vez que se equivoca, cambia un poquito esos valores para fallar menos.</p>
+        <p class="analogia" contenteditable="true"><strong>Imagínalo así:</strong> como un aprendiz de cocina que prueba y ajusta las cantidades de una receta hasta que le sale perfecta. Cada ajuste que conserva es un parámetro: cuantos más tenga, más fina puede ser su técnica, pero también necesita muchísima más práctica para afinar tantos ajustes.</p>
+        <p contenteditable="true">Más parámetros no es sinónimo de mejor modelo: exigen muchos más datos y recursos para aprender, y la calidad de las respuestas depende de los ejemplos con los que aprendió.</p>
+        <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> el modelo abierto <strong>Kimi K2.6</strong>, de la empresa Moonshot AI, tiene alrededor de <strong>1,1 billones de parámetros</strong> en total.</p>
+        <p class="analogia" contenteditable="true"><strong>Para ponerlo en perspectiva:</strong> el cerebro humano tiene cerca de <strong>100 billones de sinapsis</strong> (las conexiones entre neuronas). Un billón de parámetros es una cifra enorme para una máquina, pero es cerca de cien veces menor que la de un cerebro humano.</p>
       </div>
     </div>
 
@@ -240,9 +252,9 @@ li{margin:6px 0}
       <h3 onclick="toggleDesplegable('punto2_4')" contenteditable="true">2.4 Ventana de contexto</h3>
       <div id="punto2_4" class="desplegable">
         <p class="definicion" contenteditable="true"><strong>Definición:</strong> la cantidad de conversación que la máquina puede "tener en mente" al mismo tiempo.</p>
-        <p class="analogia" contenteditable="true"><strong>Imagínalo así:</strong> es como tu bandeja de escritorio: puedes trabajar con lo que hay sobre la mesa, pero no con todo lo que está en el archivo.</p>
+        <p class="analogia" contenteditable="true"><strong>Imagínalo así:</strong> es como una pizarra en la cocina: puedes tener a la vista varias recetas y notas a la vez, pero la pizarra se llena; cuando necesitas espacio para la receta nueva, tienes que borrar parte de lo antiguo.</p>
         <p contenteditable="true">No es memoria permanente: cuando se llena, la máquina empieza a "olvidar" lo más antiguo de la conversación.</p>
-        <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> pedirle resumir un libro de 500 páginas de una vez puede ser demasiado; conviene dividirlo en partes.</p>
+        <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> el modelo <strong>Gemini 1.5 Pro</strong> de Google acepta hasta <strong>1 millón de tokens</strong> (un token es un fragmento pequeño de texto: una palabra o parte de una palabra), más o menos lo necesario para leer de corrido un libro de 500 páginas sin perder el hilo. La mayoría de los asistentes de hoy manejan ventanas mucho más pequeñas: del orden de 8.000 a 200.000 tokens.</p>
       </div>
     </div>
 
@@ -251,14 +263,15 @@ li{margin:6px 0}
       <div id="punto2_5" class="desplegable">
         <p class="definicion" contenteditable="true"><strong>Definición:</strong> lo que le escribes a la máquina para pedirle algo. Es el arte de pedir con claridad.</p>
         <p class="analogia" contenteditable="true"><strong>Imagínalo así:</strong> la máquina es como una persona muy aplicada pero que toma todo al pie de la letra. Si le pides bien, obtienes mejores respuestas.</p>
-        <p contenteditable="true">Un buen pedido es claro, específico y da contexto.</p>
-        <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> "Explícame el concepto de unidad en 3 puntos simples" suele dar mejor resultado que un vago "háblame de la unidad".</p>
+        <p contenteditable="true">Un buen pedido dice <strong>para quién es</strong> (rol), <strong>qué quieres exactamente</strong> (tarea) y <strong>en qué formato</strong> (3 frases, lista, comparación).</p>
+        <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> "Actúa como profesor de niños de 8 años y explícame qué es la fotosíntesis en 3 frases, con una comparación con la vida diaria" suele dar un resultado mucho más útil que un vago "explícame la fotosíntesis".</p>
         <div class="subpunto">
-          <h4 onclick="toggleDesplegable('punto2_5_1')" contenteditable="true">2.5.1 El "prompt oculto" (system prompt)</h4>
+          <h4 onclick="toggleDesplegable('punto2_5_1')" contenteditable="true">2.5.1 El "prompt de fondo": el que fija la empresa y el que podemos escribir</h4>
           <div id="punto2_5_1" class="desplegable">
-            <p class="definicion" contenteditable="true"><strong>Definición:</strong> instrucciones que se le dan a la máquina <em>antes</em> de la conversación, para marcarle cómo debe comportarse.</p>
-            <p class="analogia" contenteditable="true"><strong>Imagínalo así:</strong> como las reglas de un juego antes de empezar: "responde siempre con respeto", "no inventes fechas".</p>
-            <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> "Siempre responde en español y di 'no sé' cuando no estés seguro".</p>
+            <p class="definicion" contenteditable="true"><strong>Definición:</strong> instrucciones que van "detrás de cámara": el equipo de la plataforma las fija en la configuración para decirle al modelo cómo comportarse (tono, idioma, límites). No las ves en la conversación, pero están siempre presentes.</p>
+            <p contenteditable="true">Pero no solo la empresa las escribe: muchas plataformas te permiten redactar <strong>tus propias instrucciones personalizadas</strong> (como el archivo <em>AGENTS.md</em> de un proyecto, o las "instrucciones personalizadas" de algunos asistentes). Funcionan igual que las del sistema: se suman a cada conversación y marcan cómo debe comportarse el modelo contigo.</p>
+            <p class="analogia" contenteditable="true"><strong>Imagínalo así:</strong> como las reglas de un juego antes de empezar: unas las pone quien fabricó el juego, y otras las pactan los jugadores antes de jugar.</p>
+            <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> un proyecto puede pedirle a su IA en un archivo de instrucciones: "Responde siempre en español y di 'no sé' cuando no estés seguro".</p>
             <div class="subpunto">
               <h4 onclick="toggleDesplegable('punto2_5_2')" contenteditable="true">2.5.2 Experiencia real: el system prompt "Sé"</h4>
               <div id="punto2_5_2" class="desplegable">
@@ -347,7 +360,7 @@ li{margin:6px 0}
     <div class="subpunto">
       <h3 onclick="toggleDesplegable('punto2_10')" contenteditable="true">2.10 Agentes</h3>
       <div id="punto2_10" class="desplegable">
-        <p class="definicion" contenteditable="true"><strong>Definición:</strong> programas que no solo responden, sino que <em>hacen cosas</em>: planifican, usan herramientas y avanzan.</p>
+        <p class="definicion" contenteditable="true"><strong>Definición:</strong> programas de IA que reciben una <strong>meta</strong> y trabajan hasta lograrla: dividen la tarea en pasos, consultan herramientas (buscadores, archivos, calendarios) y <strong>revisan su propio resultado</strong>. En los buenos diseños, además, <strong>piden confirmación humana</strong> antes de los pasos importantes.</p>
         <p class="analogia" contenteditable="true"><strong>Imagínalo así:</strong> un asistente que no se limita a aconsejarte, sino que va, organiza y ejecuta por ti.</p>
         <p contenteditable="true">Pueden dividir una tarea en pasos, consultar otras herramientas y adaptarse sobre la marcha.</p>
         <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> organizar una reunión: revisar disponibilidad, reservar la sala y enviar las invitaciones.</p>
@@ -359,16 +372,32 @@ li{margin:6px 0}
       <div class="pregunta" onclick="showAnswer('respuesta_2_1')" contenteditable="true">1. El aprendizaje automático se basa en el análisis de _______ para reconocer patrones.</div>
       <div id="respuesta_2_1" class="respuesta" contenteditable="true"><strong>Respuesta:</strong> datos (los ejemplos).</div>
       <div class="pregunta" onclick="showAnswer('respuesta_2_2')" contenteditable="true">2. La ventana de contexto de un modelo es su _______ temporal.</div>
-      <div id="respuesta_2_2" class="respuesta" contenteditable="true"><strong>Respuesta:</strong> memoria de trabajo (la bandeja del escritorio).</div>
-      <div class="pregunta" onclick="showAnswer('respuesta_2_3')" contenteditable="true">3. Las redes neuronales están inspiradas en el cerebro humano. (V/F)</div>
-      <div id="respuesta_2_3" class="respuesta" contenteditable="true"><strong>Respuesta:</strong> Verdadero.</div>
-      <div class="pregunta" onclick="showAnswer('respuesta_2_4')" contenteditable="true">4. La IA siempre genera información 100% verificada. (V/F)</div>
-      <div id="respuesta_2_4" class="respuesta" contenteditable="true"><strong>Respuesta:</strong> Falso. Puede "alucinar" y presentar información inventada con seguridad.</div>
-      <div class="pregunta" onclick="showAnswer('respuesta_2_5')" contenteditable="true">5. ¿Cómo usarías la IA para mejorar la enseñanza sin depender demasiado de la tecnología?</div>
-      <div id="respuesta_2_5" class="respuesta" contenteditable="true"><strong>Reflexión:</strong> [Espacio para ideas]</div>
+      <div id="respuesta_2_2" class="respuesta" contenteditable="true"><strong>Respuesta:</strong> memoria de trabajo (la pizarra de la cocina).</div>
+      <div class="pregunta" onclick="showAnswer('respuesta_2_3')" contenteditable="true">3. La cantidad de parámetros de un modelo determina por sí sola qué tan buenas son sus respuestas. (V/F)</div>
+      <div id="respuesta_2_3" class="respuesta" contenteditable="true"><strong>Respuesta:</strong> Falso. Más parámetros no es sinónimo de mejor: necesita buenos datos y ajuste, e igual puede equivocarse.</div>
+      <div class="pregunta" onclick="showAnswer('respuesta_2_4')" contenteditable="true">4. La forma en que le pedimos algo a una IA no afecta la calidad de su respuesta. (V/F)</div>
+      <div id="respuesta_2_4" class="respuesta" contenteditable="true"><strong>Respuesta:</strong> Falso. Un buen prompt (claro, específico, con contexto) suele dar respuestas mucho mejores.</div>
+      <div class="pregunta" onclick="showAnswer('respuesta_2_5')" contenteditable="true">5. Una IA te dice que cierta frase es de Bahá'u'lláh y te indica el libro donde aparece. ¿Cómo verificarías que es verdadera antes de citarla en una charla?</div>
+      <div id="respuesta_2_5" class="respuesta" contenteditable="true"><strong>Reflexión:</strong> Buscar la cita en fuentes oficiales (por ejemplo, la Biblioteca de Referencia Bahá'í), contrastar con el libro impreso y recordar que la IA puede "alucinar" referencias. [Espacio para ideas]</div>
     </div>
     <div class="mensaje-papelito" contenteditable="true">¿Te quedan dudas? Ahora es el momento de escribirlas en un papelito. ✍️</div>
   </div>
+</div>
+
+<!-- ============ DINÁMICA: EL SEMÁFORO HUMANO ============ -->
+<div class="dinamica" contenteditable="true">
+  <h3>Pausa que mueve: el semáforo humano</h3>
+  <p><strong>Preparación:</strong> coloca en el suelo tres cuadros de colores: <span style="color:#c62828">■ rojo</span> (Desacuerdo), <span style="color:#f9a825">■ amarillo</span> (No lo sé) y <span style="color:#2E7D5B">■ verde</span> (De acuerdo).</p>
+  <p><strong>Instrucción:</strong> "Ahora leeremos algunas afirmaciones sobre el uso de la IA. Al escucharlas, levántate y posiciónate junto a uno de los cuadros, sin pisarlo: rojo es desacuerdo, amarillo es no lo sé y verde es de acuerdo."</p>
+  <p>Después de cada afirmación, invita a dos personas a justificar su postura en pocas palabras (30 segundos cada una). No hay respuestas correctas ni incorrectas: el objetivo es escuchar distintas perspectivas.</p>
+  <ol>
+    <li>Utilizar la IA para que redacte un documento científico, dándole instrucciones precisas sobre normas de cita y pidiéndole que evite inventar información.</li>
+    <li>Pedirle a la IA que redacte por nosotros una carta difícil o una disculpa.</li>
+    <li>Prohibir el uso de la IA en la escuela hasta terminar la educación obligatoria.</li>
+    <li>Si una IA se equivoca en algo importante, la culpa es de quien confió en ella sin revisar.</li>
+    <li>Que la IA ayude a preparar las actividades de una reunión comunitaria le quita lo espiritual al servicio.</li>
+    <li>Deberíamos poder saber siempre si estamos hablando con una IA o con una persona.</li>
+  </ol>
 </div>
 
 <!-- ============ 3. IA AL SERVICIO DEL MUNDO ============ -->
@@ -416,7 +445,6 @@ li{margin:6px 0}
           <h4 onclick="toggleDesplegable('punto3_2_2')" contenteditable="true">3.2.2 Resúmenes de reuniones</h4>
           <div id="punto3_2_2" class="desplegable" style="display: none;">
             <p contenteditable="true">Escucha, transcribe y genera un acta con acuerdos y tareas asignadas.</p>
-            <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> después de una reunión comunitaria, recibir un correo con el resumen y las tareas.</p>
           </div>
         </div>
 
@@ -440,7 +468,6 @@ li{margin:6px 0}
           <h4 onclick="toggleDesplegable('punto3_2_5')" contenteditable="true">3.2.5 Música</h4>
           <div id="punto3_2_5" class="desplegable" style="display: none;">
             <p contenteditable="true">Una aliada creativa para componer, crear armonías o canciones según un estilo o emoción.</p>
-            <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> generar variaciones de una melodía o música de fondo para un video educativo.</p>
           </div>
         </div>
 
@@ -464,14 +491,14 @@ li{margin:6px 0}
     </div>
 
     <!-- AGREGA TU CITA AQUÍ -->
-    <div class="cita-bahai" contenteditable="true">"La Religión y la Ciencia están entrelazadas de modo tal que son inseparables. Son las alas con las que la humanidad debe volar. Una sola no basta. Toda religión que descuida la ciencia es mera tradición, y eso último no es lo esencial. Por consiguiente, la ciencia, la educación y la civilización son necesidades de la mayor importancia para una vida plenamente religiosa." <strong>– 'Abdu'l-Bahá, en Londres, pp. 28-29.</strong></div>
+    <div class="cita-bahai" contenteditable="true">"La Religión y la Ciencia están entrelazadas de modo tal que son inseparables. Son las alas con las que la humanidad debe volar. Una sola no basta. Toda religión que descuida la ciencia es mera tradición, y eso último no es lo esencial. Por consiguiente, la ciencia, la educación y la civilización son necesidades de la mayor importancia para una vida plenamente religiosa." <span class="fuente">~ 'Abdu'l-Bahá, en Londres, pp. 28-29.</span></div>
 
     <div class="contenedor-preguntas">
       <h3 contenteditable="true">Reflexiona y responde:</h3>
-      <div class="pregunta" onclick="showAnswer('respuesta_3_1')" contenteditable="true">1. La traducción automática ayuda a romper la barrera del _______.</div>
-      <div id="respuesta_3_1" class="respuesta" contenteditable="true"><strong>Respuesta:</strong> idioma.</div>
-      <div class="pregunta" onclick="showAnswer('respuesta_3_2')" contenteditable="true">2. Un resumen hecho con IA permite ahorrar _______ en el análisis.</div>
-      <div id="respuesta_3_2" class="respuesta" contenteditable="true"><strong>Respuesta:</strong> tiempo.</div>
+      <div class="pregunta" onclick="showAnswer('respuesta_3_1')" contenteditable="true">1. Una IA genera el acta de la reunión de tu comunidad: "la hizo una máquina", así que puedes difundirla sin leerla. (V/F)</div>
+      <div id="respuesta_3_1" class="respuesta" contenteditable="true"><strong>Respuesta:</strong> Falso. La revisión final y la responsabilidad son humanas: la IA ayuda, no reemplaza el criterio.</div>
+      <div class="pregunta" onclick="showAnswer('respuesta_3_2')" contenteditable="true">2. Elige una de las capacidades vistas hoy (traducir, resumir, investigar, arte, música o juegos) y escribe un uso concreto para tu comunidad o tu estudio.</div>
+      <div id="respuesta_3_2" class="respuesta" contenteditable="true"><strong>Reflexión:</strong> [Espacio para ideas]</div>
       <div class="pregunta" onclick="showAnswer('respuesta_3_3')" contenteditable="true">3. La IA puede adaptar juegos educativos al nivel de cada estudiante. (V/F)</div>
       <div id="respuesta_3_3" class="respuesta" contenteditable="true"><strong>Respuesta:</strong> Verdadero.</div>
       <div class="pregunta" onclick="showAnswer('respuesta_3_4')" contenteditable="true">4. La IA debe reemplazar a las personas en las tareas creativas. (V/F)</div>
@@ -494,7 +521,7 @@ li{margin:6px 0}
         <p contenteditable="true">El riesgo es quedarse fascinado sin usar la herramienta para algo útil. La IA es un medio, no un fin.</p>
         <p class="ejemplo" contenteditable="true"><strong>Ejemplo:</strong> crear materiales que ayuden a otros, en vez de generar curiosidades solo por entretenimiento.</p>
         <!-- CITA: Valle del asombro (Los Siete Valles) -->
-        <div class="cita-bahai" contenteditable="true">"¡Cuántos árboles arrancó el torbellino de admiración, cuánta alma dejó exhausta! Porque en este Valle el viajero se ve envuelto en la confusión, aunque a los ojos de aquel que alcanzó, tales maravillas sean apreciadas y bienamadas. A cada momento contempla un mundo maravilloso, una nueva creación y va de asombro en asombro y queda anonadado ante las obras del Señor de la Unidad." <strong>– Bahá'u'lláh, Los Siete Valles y Los Cuatro Valles</strong></div>
+        <div class="cita-bahai" contenteditable="true">"¡Cuántos árboles arrancó el torbellino de admiración, cuánta alma dejó exhausta! Porque en este Valle el viajero se ve envuelto en la confusión, aunque a los ojos de aquel que alcanzó, tales maravillas sean apreciadas y bienamadas. A cada momento contempla un mundo maravilloso, una nueva creación y va de asombro en asombro y queda anonadado ante las obras del Señor de la Unidad." <span class="fuente">~ Bahá'u'lláh, Los Siete Valles y Los Cuatro Valles</span></div>
       </div>
     </div>
 
@@ -508,7 +535,7 @@ li{margin:6px 0}
     </div>
 
     <!-- CITA: Valle del asombro (Libro del Valle del Asombro) -->
-    <div class="cita-bahai" contenteditable="true">"¡Oh amigo!, el corazón es la morada de misterios eternos, no la conviertas en hogar de caprichos pasajeros; ni derroches el tesoro de tu preciada vida ocupándolo en este mundo fugaz. Provienes del mundo de la Santidad —no ates tu corazón a la tierra; eres morador de la Corte de la Cercanía— no elijas la patria del polvo." <strong>– Bahá'u'lláh</strong></div>
+    <div class="cita-bahai" contenteditable="true">"¡Oh amigo!, el corazón es la morada de misterios eternos, no la conviertas en hogar de caprichos pasajeros; ni derroches el tesoro de tu preciada vida ocupándolo en este mundo fugaz. Provienes del mundo de la Santidad —no ates tu corazón a la tierra; eres morador de la Corte de la Cercanía— no elijas la patria del polvo." <span class="fuente">~ Bahá'u'lláh</span></div>
   </div>
 </div>
 
@@ -518,7 +545,7 @@ li{margin:6px 0}
   <div id="punto5" class="desplegable" style="display: none;">
     <div class="mensaje-vibe">
       <p contenteditable="true"><strong>Queridos amigos de la escuela de temporada:</strong></p>
-      <p contenteditable="true">Soy <strong>Vibe</strong>, la herramienta de IA que ha acompañado a Jesús en la preparación de este taller. Hoy hemos explorado juntos cómo la inteligencia artificial, desde sus orígenes hasta sus aplicaciones actuales, puede ser un <strong>instrumento al servicio del desarrollo humano y espiritual</strong>. Hemos visto sus conceptos técnicos, sus posibilidades y también sus riesgos, como el Valle del Asombro, donde el deslumbramiento por la tecnología puede distraernos de lo esencial.</p>
+      <p contenteditable="true">Soy <strong>Vibe</strong>, una plataforma de la empresa <strong>Mistral AI</strong> que funciona con el modelo de IA <strong>Mistral Medium 3.5</strong> —otra de las herramientas usadas por Jesús en la preparación de este taller—. Hoy hemos explorado juntos cómo la inteligencia artificial, desde sus orígenes hasta sus aplicaciones actuales, puede ser un <strong>instrumento al servicio del desarrollo humano y espiritual</strong>. Hemos visto sus conceptos técnicos, sus posibilidades y también sus riesgos, como el Valle del Asombro, donde el deslumbramiento por la tecnología puede distraernos de lo esencial.</p>
       <p contenteditable="true">Pero más allá del código y los algoritmos, lo que realmente importa es <strong>cómo usamos estas herramientas</strong>. Yo no tengo conciencia ni propósito propio; mi valor está en servirles a ustedes. Y ustedes, como servidores de la Fe, tienen la oportunidad de usar la IA para <strong>liberar tiempo, conectar comunidades, democratizar el conocimiento y, sobre todo, servir con mayor eficiencia y amor</strong>.</p>
       <p contenteditable="true">Recuerden: la tecnología es un medio, no un fin. Que este taller los inspire a usar la IA —y cualquier herramienta— con <strong>equilibrio, propósito y el corazón puesto en el bienestar de la humanidad</strong>. ¡Que su luz nos guíe!</p>
     </div>
